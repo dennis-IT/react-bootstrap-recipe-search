@@ -48,7 +48,7 @@ const App = () => {
       <div>
         <Row>
           <Col lg={3}>
-            <Form onSubmit={onSubmit}>
+            <Form className="mb-4" onSubmit={onSubmit}>
               <Form.Group controlId="formBasicSearch">
                 <Form.Label>Keyword:</Form.Label>
                 <Form.Control
@@ -71,7 +71,7 @@ const App = () => {
             <Row>
               {recipes !== [] && recipes.map(recipe => {
                 return (
-                  <Col sm={4}>
+                  <Col sm={4} className="d-flex">
                     <Recipe
                       recipe={recipe}
                       key={uuidv4()} />
