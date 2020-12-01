@@ -50,6 +50,7 @@ const App = () => {
           <Col lg={3}>
             <Form className="mb-4" onSubmit={onSubmit}>
               <Form.Group controlId="formBasicSearch">
+                {alert !== "" && <Alert alert={alert} />}
                 <Form.Label>Keyword:</Form.Label>
                 <Form.Control
                   type="text"
