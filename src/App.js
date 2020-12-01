@@ -44,7 +44,7 @@ const App = () => {
 
   return (
     <div className="container">
-      <h1 className="header text-center">Recipe Searching App</h1>
+      <h1 className="header text-center">Recipe Searching App By React & Bootstrap</h1>
       <div>
         <Row>
           <Col lg={3}>
@@ -72,10 +72,10 @@ const App = () => {
             <Row>
               {recipes !== [] && recipes.map(recipe => {
                 return (
-                  <Col sm={4} className="d-flex">
+                  <Col sm={4} className="d-flex" key={uuidv4()}>
                     <Recipe
                       recipe={recipe}
-                      key={uuidv4()} />
+                    />
                   </Col>
                 )
               })}

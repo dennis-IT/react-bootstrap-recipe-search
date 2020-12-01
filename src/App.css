@@ -22,3 +22,16 @@ input:placeholder-shown {
   font-weight: 400;
   text-align: center;
 }
+
+.title {
+  background-color: rgba(161, 161, 161, 0.7);
+  padding: 0.5rem 0.5rem;
+  width: 100%;
+  font-weight: 500 !important;
+  text-shadow: 0 0.5rem 0.5rem #555;
+  color: ivory;
+}
+
+.card-body {
+  flex: 0 0 auto !important;
+}

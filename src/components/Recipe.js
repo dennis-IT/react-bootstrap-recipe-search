@@ -12,15 +12,14 @@ const Recipe = (props) => {
             <Card.Img
                 variant="top"
                 src={image} />
+            <Card.Title className="position-absolute title">{label}</Card.Title>
             <Card.Body className="d-flex flex-column">
-                <Card.Title >{label}</Card.Title>
-                <div className="mt-auto">
-                    <Card.Text>
-                        <a href={url} target="_blank" rel="noopener noreferrer">Go to instructions</a>
-                    </Card.Text>
-                    <Button variant="secondary">Ingredients</Button>
-                </div>
+                <Card.Text>
+                    <a href={url} target="_blank" rel="noopener noreferrer">Go to instructions</a>
+                </Card.Text>
+                <Button variant="secondary" onClick={() => setShow(!show)}>Ingredients</Button>
             </Card.Body>
+            {show && <RecipeDetails ingredients={ingredients} />}
         </Card>
     )
 };
